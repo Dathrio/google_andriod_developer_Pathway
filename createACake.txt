@@ -1,0 +1,38 @@
+fun main() {
+    val age = 24
+    val layers = 5
+    
+    printCakeCandles(age)
+    printCakeTop(age)
+   	printCakeBottom(age, layers)
+}
+
+fun printCakeTop(age: Int) {
+    cake(age, "=")
+}
+
+fun printCakeCandles(age: Int) {
+    candle(age, ",")
+    candle(age, "|")
+}
+
+fun printCakeBottom(age: Int, layers: Int) {
+    repeat(layers) {
+    	cake(age, "@")
+    }
+}
+
+fun candle(age: Int, char: String) {
+    print(" ") //adds insetting for the candle stems
+    repeat(age) {
+        print(char)
+    }
+    println()
+}
+
+fun cake(age: Int, char: String) {
+    repeat(age + 2) {
+        	print(char)
+    	}
+    println()
+}
